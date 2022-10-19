@@ -47,8 +47,12 @@
 | POST   | Creates a Product                       | `/api/v1/product`           |
 | POST   | Creates Cart for Customers              | `/api/v1/cart/:productId`   |
 | DELETE | Clears the Cart                         | `/api/v1/cart`              |
-
-
+| PATCH  | Deletes a single Item in the cart       | `api/v1/cart/:productId`    |
+| GET    | Gets the cart of a specific customer    | `api/v1/cart`               |
+| POST   | Creates Order                           | `api/V1/order`              |
+| GET    | Gets all Order with a default of 5(Only)|  `api/v1/order`                          |
+|        | 5 orders can be fetched at a time       |                             |
+|
 # Documentation
   + click [https://documenter.getpostman.com/view/19693532/2s847LNXGY](https://documenter.getpostman.com/view/19693532/2s847LNXGY)to view the documentation 
 
