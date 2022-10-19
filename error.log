@@ -1,0 +1,13 @@
+[ERROR  ] - Cannot read properties of undefined (reading 'cart')
+[ERROR  ] - Cannot read properties of undefined (reading 'cart')
+[ERROR  ] - Cannot read properties of undefined (reading 'cart')
+[ERROR  ] - Operation `customers.findOne()` buffering timed out after 10000ms
+[ERROR  ] - Operation `customers.findOne()` buffering timed out after 10000ms
+[ERROR  ] - Operation `customers.findOne()` buffering timed out after 10000ms
+[ERROR  ] - Cannot populate path `cart.items.productId` because it is not in your schema. Set the `strictPopulate` option to false to override.
+[ERROR  ] - Operation `customers.findOne()` buffering timed out after 10000ms
+[ERROR  ] - Operation `customers.findOne()` buffering timed out after 10000ms
+[ERROR  ] - Cannot create field 'items' in element {cart: [ { product: ObjectId('63500b4d82a7067afe14cc8e'), quantity: 2, _id: ObjectId('63505902785f3a450dd67849') } ]}
+[ERROR  ] - Cannot read properties of undefined (reading 'product')
+[ERROR  ] - Cannot create field 'items' in element {cart: [ { product: ObjectId('63500b4d82a7067afe14cc8e'), quantity: 2, _id: ObjectId('63505902785f3a450dd67849') } ]}
+[ERROR  ] - Cannot create field 'items' in element {cart: [ { product: ObjectId('63500b4d82a7067afe14cc8e'), quantity: 2, _id: ObjectId('63505902785f3a450dd67849') } ]}
