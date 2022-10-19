@@ -1,7 +1,6 @@
 import { Schema } from "mongoose";
-import { Product } from "./ProductInterfaces";
 
-interface ACustomer {
+interface ICustomer {
     fullName: string;
     email: string;
     password: string;
@@ -23,6 +22,6 @@ interface CustomerLogin {
 
 
 export {
-    ACustomer,
+    ICustomer,
     CustomerLogin
 }

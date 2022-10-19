@@ -1,11 +1,11 @@
-import { CreateOrder, QueryOrder } from "../utils/Interfaces/OrderInterfaces";
+import { IOrder, QueryOrder } from "../utils/Interfaces/OrderInterfaces";
 import OrderModel from "../models/order.model";
 import constants from "../config/constants";
 
 const { MESSAGES } = constants;
 
 class OrderServices {
-    async addOrder(OrderData: CreateOrder) {
+    async addOrder(OrderData: IOrder) {
         
         return await OrderModel.create(OrderData);
     }

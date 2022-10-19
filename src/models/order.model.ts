@@ -1,9 +1,9 @@
 
 import { Schema, model, Model } from "mongoose";
 import constants from "../config/constants";
-import { CreateOrder } from "../utils/Interfaces/OrderInterfaces";
+import { IOrder } from "../utils/Interfaces/OrderInterfaces";
 
-const OrderSchema = new Schema<CreateOrder>(
+const OrderSchema = new Schema<IOrder>(
   {
     items: [
       {
@@ -39,6 +39,6 @@ const OrderSchema = new Schema<CreateOrder>(
   { timestamps: true }
 );
 
-const OrderModel: Model<CreateOrder> = model(constants.DB_COLLECTION.ORDER, OrderSchema);
+const OrderModel: Model<IOrder> = model(constants.DB_COLLECTION.ORDER, OrderSchema);
 
 export default OrderModel;

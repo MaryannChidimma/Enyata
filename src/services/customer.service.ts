@@ -1,6 +1,6 @@
 import { BadRequestError, NotFoundError, UnAuthorizedError } from "../../lib/appError";
 import {
-    ACustomer,
+    ICustomer,
     CustomerLogin,
 } from "../utils/Interfaces/CustomerInterfaces";
 import CustomerModel from "../models/customer.model";
@@ -9,7 +9,7 @@ import { comparePassword, encryptData } from "../utils/dataCryto";
 const { MESSAGES } = constants;
 
 class CustomerServices {
-    async addCustomer(CustomerData: ACustomer) {
+    async addCustomer(CustomerData: ICustomer) {
 
         const existingCustomer = await CustomerModel.findOne({ email: CustomerData.email });
 
@@ -27,7 +27,7 @@ class CustomerServices {
         if (!isPassword) throw new UnAuthorizedError("Invalid Password")
 
         const token = encryptData({ _id: existingCustomer._id, email: existingCustomer.email })
-     
+
         const customer = { ...existingCustomer, token }
         return customer
 
@@ -40,7 +40,7 @@ class CustomerServices {
         return existingCustomer
     }
 
-    async findCustomerAndPopulate(query: {}){
+    async findCustomerAndPopulate(query: {}) {
         const existingCustomer = await CustomerModel.findOne(query).populate('cart.items.product');
         return existingCustomer
     }

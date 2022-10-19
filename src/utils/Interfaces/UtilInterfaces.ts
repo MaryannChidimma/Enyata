@@ -1,10 +1,10 @@
 import {Request } from "express"
 import { Document} from "mongoose";
-import { ACustomer } from "./CustomerInterfaces";
+import { ICustomer } from "./CustomerInterfaces";
 
 interface AuthRequest extends Request {
-  auth?: ACustomer & Document;
-  customer?: ACustomer& Document;
+  auth?: ICustomer & Document;
+  customer?: ICustomer& Document;
 }
 interface SearchQuery {
   pageSize?: number;

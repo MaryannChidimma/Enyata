@@ -1,7 +1,7 @@
 import { Schema } from "mongoose"
 import { SearchQuery } from "./UtilInterfaces";
 
-interface CreateOrder {
+interface IOrder {
  items:  any;
  total: number;
  customer: Schema.Types.ObjectId;
@@ -25,7 +25,7 @@ interface QueryOrder extends SearchQuery{
 }
 
 export {
-    CreateOrder,
+    IOrder,
     SearchOrder,
     QueryOrder,
     Item

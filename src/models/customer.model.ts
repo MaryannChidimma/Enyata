@@ -1,10 +1,10 @@
 import { Schema, model, Model } from "mongoose";
 import constants from "../config/constants";
-import { ACustomer } from "../utils/Interfaces/CustomerInterfaces";
+import { ICustomer} from "../utils/Interfaces/CustomerInterfaces";
 import {Item} from "../utils/Interfaces/OrderInterfaces"
 import { Product } from "../utils/Interfaces/ProductInterfaces";
 
-const CustomerSchema = new Schema<ACustomer>(
+const CustomerSchema = new Schema<ICustomer>(
   {
     fullName: {
       type: String,
@@ -79,6 +79,6 @@ CustomerSchema.methods.clearCart = function () {
 };
 
 
-const CustomerModel: Model<ACustomer> = model(constants.DB_COLLECTION.CUSTOMER, CustomerSchema);
+const CustomerModel: Model<ICustomer> = model(constants.DB_COLLECTION.CUSTOMER, CustomerSchema);
 
 export default CustomerModel;
