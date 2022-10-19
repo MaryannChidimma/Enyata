@@ -1,5 +1,5 @@
 
-# nyata Assessment 
+# Enyata Assessment 
 
 > A Simple CRUD using RestAPI
 ## Getting Started
