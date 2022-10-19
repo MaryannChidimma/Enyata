@@ -1,4 +1,4 @@
-import { CreateOrder, QueryOrder } from "../Interfaces/OrderInterfaces";
+import { CreateOrder, QueryOrder } from "../utils/Interfaces/OrderInterfaces";
 import OrderModel from "../models/order.model";
 import constants from "../config/constants";
 
@@ -11,7 +11,7 @@ class OrderServices {
     }
     async findOrder(query: QueryOrder) {
 
-    const pageSize = Number(query.pageSize) || 20;
+    const pageSize = Number(query.pageSize) || 5;
     const pageNo = Number(query.pageNo) || 1;
 
     const queryObject: QueryOrder = {};
@@ -27,10 +27,7 @@ class OrderServices {
     // If there is a query by price
     if (query.price) {
       fetched =  await OrderModel
-        .find({}, { items : { $elemMatch: {price: query.price  } } })
-        .populate({
-            path: 'items.product',
-          })
+        .find(queryObject, { items : { $elemMatch: {price: Number(query.price) } } })
         .sort({ createdAt: 1 })
         .skip(noToSkip)
         .limit(pageSize)

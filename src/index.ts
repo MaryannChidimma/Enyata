@@ -5,9 +5,8 @@ import { ErrorMiddleware } from './middleware/errorHandler';
 import constants from './config/constants';
 import apiRoutes from './routes/index'
 import 'express-async-errors'
-import './startup/database'
 import logger from '../lib/logger'
-import database from './startup/database';
+import database from './config/database';
 import uuid from 'node-uuid'
 
 import createNamespace from 'continuation-local-storage'

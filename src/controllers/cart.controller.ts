@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { BadRequestError } from "../../lib/appError";
-import { AuthRequest } from "../Interfaces/UtilInterfaces";
+import { AuthRequest } from "../utils/Interfaces/UtilInterfaces";
 import cartService from "../services/cart.service";
 import productService from "../services/product.service";
 import appResponse from "../../lib/appResponse"

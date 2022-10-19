@@ -1,5 +1,4 @@
 import CustomerModel from '../models/customer.model'
-import { Product } from '../Interfaces/ProductInterfaces'
 import { BadRequestError } from '../../lib/appError';
 
 

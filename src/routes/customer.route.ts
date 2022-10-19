@@ -1,17 +1,16 @@
-const express = require('express');
-import { authenticate } from '../middleware/auth.middleware';
+import express from 'express';
 import { Validator } from '../validators'
 import {
   RegisterSchema,
   LoginSchema
  } from '../validators/customer.validator';
-import customerCtrl from '../controllers/customer.controller';
+import customerController from '../controllers/customer.controller';
 
 const router = express.Router();
 
 function customerRoute(){
-router.post('/register', Validator(RegisterSchema, 'body'), customerCtrl.register);
-router.post('/login', Validator(LoginSchema, 'body'), customerCtrl.login);
+router.post('/register', Validator(RegisterSchema, 'body'), customerController.register);
+router.post('/login', Validator(LoginSchema, 'body'), customerController.login);
 return router
 }
 

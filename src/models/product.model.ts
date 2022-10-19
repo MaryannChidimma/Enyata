@@ -1,7 +1,7 @@
 
 import { Schema, model, Model } from "mongoose";
 import constants from "../config/constants";
-import { Product } from "../Interfaces/ProductInterfaces";
+import { Product } from "../utils/Interfaces/ProductInterfaces";
 
 const ProductSchema = new Schema<Product>(
   {

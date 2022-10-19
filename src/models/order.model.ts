@@ -1,7 +1,7 @@
 
 import { Schema, model, Model } from "mongoose";
 import constants from "../config/constants";
-import { CreateOrder } from "../Interfaces/OrderInterfaces";
+import { CreateOrder } from "../utils/Interfaces/OrderInterfaces";
 
 const OrderSchema = new Schema<CreateOrder>(
   {

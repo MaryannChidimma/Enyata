@@ -1,5 +1,5 @@
 import { BadRequestError } from "../../lib/appError";
-import { Product } from "../Interfaces/ProductInterfaces";
+import { Product } from "../utils/Interfaces/ProductInterfaces";
 import ProductModel from "../models/product.model";
 import constants from "../config/constants";
 

@@ -4,7 +4,7 @@ import appResponse from '../../lib/appResponse'
 import constants from '../config/constants'
 import logger from '../../lib/logger'
 import _ from 'lodash';
-import { passwordHash } from '../utility/dataCryto'
+import { passwordHash } from '../utils/dataCryto'
 const {MESSAGES} = constants
 
 class CustomerController {

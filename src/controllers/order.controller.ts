@@ -4,7 +4,7 @@ import appResponse from '../../lib/appResponse'
 import constants from '../config/constants'
 import productService from '../services/product.service'
 import { BadRequestError, NotFoundError } from '../../lib/appError'
-import { AuthRequest } from '../Interfaces/UtilInterfaces'
+import { AuthRequest } from '../utils/Interfaces/UtilInterfaces'
 import customerService from '../services/customer.service'
 const {MESSAGES} = constants
 

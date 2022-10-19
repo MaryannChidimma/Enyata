@@ -1,8 +1,8 @@
 import { Response, NextFunction} from "express"
 import { UnAuthorizedError } from "../../lib/appError";
-import { decryptData } from "../utility/dataCryto";
+import { decryptData } from "../utils/dataCryto";
 import customerService from "../services/customer.service"
-import { AuthRequest } from "../Interfaces/UtilInterfaces";
+import { AuthRequest } from "../utils/Interfaces/UtilInterfaces";
 
 const getToken = (req:AuthRequest) => req.headers["x-auth-token"];
 

@@ -1,8 +1,8 @@
 import { Schema, model, Model } from "mongoose";
 import constants from "../config/constants";
-import { ACustomer } from "../Interfaces/CustomerInterfaces";
-import {Item} from "../Interfaces/OrderInterfaces"
-import { Product } from "../Interfaces/ProductInterfaces";
+import { ACustomer } from "../utils/Interfaces/CustomerInterfaces";
+import {Item} from "../utils/Interfaces/OrderInterfaces"
+import { Product } from "../utils/Interfaces/ProductInterfaces";
 
 const CustomerSchema = new Schema<ACustomer>(
   {
@@ -28,11 +28,9 @@ const CustomerSchema = new Schema<ACustomer>(
           product: {
             type: Schema.Types.ObjectId,
             ref: 'PRODUCT',
-           // required: true,
           },
           quantity: {
             type: Number,
-          //  required: true,
           },
         },
       ],

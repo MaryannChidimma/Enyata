@@ -20,13 +20,14 @@ const ErrorMiddleware = function (
   next: express.NextFunction
 ) {
   if (error.name === "AppError" || error.isOperational) {
-    logger.debug(error.message)
+    logger.error(error.message)
     return res
       .status(error.statusCode)
       .send(appResponse(error.message, null, false));
   }
 
   if (errorNames.includes(error.name)) {
+    logger.error(error.message)
     return res.status(400).send(appResponse(error.message, null, false));
   }
 

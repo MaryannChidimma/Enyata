@@ -2,10 +2,10 @@ import { BadRequestError, NotFoundError, UnAuthorizedError } from "../../lib/app
 import {
     ACustomer,
     CustomerLogin,
-} from "../Interfaces/CustomerInterfaces";
+} from "../utils/Interfaces/CustomerInterfaces";
 import CustomerModel from "../models/customer.model";
 import constants from "../config/constants";
-import { comparePassword, encryptData } from "../utility/dataCryto";
+import { comparePassword, encryptData } from "../utils/dataCryto";
 const { MESSAGES } = constants;
 
 class CustomerServices {
